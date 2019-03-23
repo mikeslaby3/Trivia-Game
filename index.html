@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</head>
+<body>
+
+    <h1 id="title">Trivia Game</h1>
+
+    <button id="start">Start</button>
+
+    <div id="timer-display">
+        <div>Time Remaining</div>
+        <div id="seconds-remaining"></div> <br>
+    </div>
+
+    <div id="questions">
+        <form action="">
+            <div class="question-box">
+                <span>Question 1 Goes Here</span> <br>
+                <input type="radio" name="question-1" value="q1-answer-1">Answer 1
+                <input type="radio" name="question-1" value="q1-answer-2">Answer 2
+                <input type="radio" name="question-1" value="q1-answer-3">Answer 3
+                <input type="radio" name="question-1" value="q1-answer-4">Answer 4 <br> <br>
+                <span>Question 2 Goes Here</span> <br>
+                <input type="radio" name="question-2" value="q2-answer-1">Answer 1
+                <input type="radio" name="question-2" value="q2-answer-2">Answer 2
+                <input type="radio" name="question-2" value="q2-answer-3">Answer 3
+                <input type="radio" name="question-2" value="q2-answer-4">Answer 4 <br> <br>
+                <span>Question 3 Goes Here</span> <br>
+                <input type="radio" name="question-3" value="q3-answer-1">Answer 1
+                <input type="radio" name="question-3" value="q3-answer-2">Answer 2
+                <input type="radio" name="question-3" value="q3-answer-3">Answer 3
+                <input type="radio" name="question-3" value="q3-answer-4">Answer 4 <br> <br>
+                <span>Question 4 Goes Here</span> <br>
+                <input type="radio" name="question-4" value="q4-answer-1">Answer 1
+                <input type="radio" name="question-4" value="q4-answer-2">Answer 2
+                <input type="radio" name="question-4" value="q4-answer-3">Answer 3
+                <input type="radio" name="question-4" value="q4-answer-4">Answer 4 <br> <br>
+            </div>
+
+        </form>
+    </div>
+
+    <button id="submit">Submit</button>
+
+    <div id="results">
+        <span>Game Over</span> <br>
+        <span>Score</span> <br>
+        <span>Correct</span>
+        <span id="correct-answers">0</span> <br>
+        <span>Incorrect</span>
+        <span id="incorrect-answers">0</span> <br>
+        <span>Unanswered</span>
+        <span id="not-answered">0</span>
+    </div>
+    
+</body>
+</html>
