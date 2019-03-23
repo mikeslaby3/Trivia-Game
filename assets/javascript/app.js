@@ -28,6 +28,7 @@ function gameOver() {
     toggleVisibility("#questions", HIDE);
     toggleVisibility("#results", SHOW);
     toggleVisibility("#timer-display", HIDE);
+    toggleVisibility("#submit", HIDE);
 }
 
 function calculateScore() {
@@ -35,6 +36,12 @@ function calculateScore() {
     checkAnswer($('input[name=question-2]:checked').val(), "q2-answer-1");
     checkAnswer($('input[name=question-3]:checked').val(), "q3-answer-4");
     checkAnswer($('input[name=question-4]:checked').val(), "q4-answer-4");
+    checkAnswer($('input[name=question-5]:checked').val(), "q5-answer-2");
+    checkAnswer($('input[name=question-6]:checked').val(), "q6-answer-3");
+    checkAnswer($('input[name=question-7]:checked').val(), "q7-answer-2");
+    checkAnswer($('input[name=question-8]:checked').val(), "q8-answer-4");
+    checkAnswer($('input[name=question-9]:checked').val(), "q9-answer-2");
+    checkAnswer($('input[name=question-10]:checked').val(), "q10-answer-1");
 }
 
 function checkAnswer(answer, correctAnswer) {
@@ -85,7 +92,7 @@ $(document).ready(function() {
     //     $(".question-box").append("<input type='radio' name='question-1' value=" + question[1] + "> "); 
     //     console.log("<div>" + question[0] + "</div>")  
     // }
-
+    toggleVisibility("#submit", HIDE);
     toggleVisibility("#results", HIDE);
     toggleVisibility("#questions", HIDE);
     toggleVisibility("#timer-display", HIDE);
@@ -98,6 +105,11 @@ $(document).ready(function() {
         toggleVisibility("#start", HIDE);
         toggleVisibility("#questions", SHOW);
         toggleVisibility("#timer-display", SHOW);
+        toggleVisibility("#submit", SHOW);
+    });
+
+    $('#submit').on('click', function() {
+        gameOver();
     });
 
 });

@@ -6,59 +6,91 @@
     <title>Trivia Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Audiowide|Quattrocento|Righteous" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
 <body>
+    <div class="container">
 
-    <h1 id="title">Trivia Game</h1>
+        <a id="title" href="https://fontmeme.com/star-wars-font/"><img id="title-image" src="https://fontmeme.com/permalink/190323/746809de9f171ac60025c25f37b883f6.png" alt="star-wars-font" border="0"></a> <br>
+    
+        <button id="start">Start</button>
+    
+        <div id="timer-display">
+            <div>Time Remaining</div>
+            <div id="seconds-remaining"></div> <br>
+        </div>
+    
+        <div id="questions">
+            <form action="">
+                <div class="question-box">
+                    <span id="question">Which young jedi becomes Darth Vader?</span> <br> <br>
+                    <input type="radio" name="question-1" value="q1-answer-1">Luke Skywalker
+                    <input type="radio" name="question-1" value="q1-answer-2">Obi-Wan Kenobi
+                    <input type="radio" name="question-1" value="q1-answer-3">Anakin Skywalker
+                    <input type="radio" name="question-1" value="q1-answer-4">Qui-Gon Jinn <br> <br> <br>
+                    <span id="question">What is the name of Han Solo's ship?</span> <br> <br>
+                    <input type="radio" name="question-2" value="q2-answer-1">Millenium Falcon
+                    <input type="radio" name="question-2" value="q2-answer-2">Airforce One
+                    <input type="radio" name="question-2" value="q2-answer-3">USS Enterprise
+                    <input type="radio" name="question-2" value="q2-answer-4">Apollo 18 <br> <br> <br>
+                    <span id="question">Who raises Princess Leia?</span> <br> <br>
+                    <input type="radio" name="question-3" value="q3-answer-1">Yoda
+                    <input type="radio" name="question-3" value="q3-answer-2">Luke Skywalker
+                    <input type="radio" name="question-3" value="q3-answer-3">Padme Amidala
+                    <input type="radio" name="question-3" value="q3-answer-4">Bail Organa <br> <br> <br>
+                    <span id="question">What planet is home to Chewbacca and the Wookies?</span> <br> <br>
+                    <input type="radio" name="question-4" value="q4-answer-1">Naboo
+                    <input type="radio" name="question-4" value="q4-answer-2">Tatooine
+                    <input type="radio" name="question-4" value="q4-answer-3">Dagobah
+                    <input type="radio" name="question-4" value="q4-answer-4">Kashyyk <br> <br> <br>
+                    <span id="question">What color is Mace Windu's lightsaber?</span> <br> <br>
+                    <input type="radio" name="question-5" value="q5-answer-1">Blue
+                    <input type="radio" name="question-5" value="q5-answer-2">Purple
+                    <input type="radio" name="question-5" value="q5-answer-3">Green
+                    <input type="radio" name="question-5" value="q5-answer-4">Red <br> <br> <br>
+                    <span id="question">Who is Luke and Leia's mother?</span> <br> <br>
+                    <input type="radio" name="question-6" value="q6-answer-1">Kit Fisto
+                    <input type="radio" name="question-6" value="q6-answer-2">Syfo Dias
+                    <input type="radio" name="question-6" value="q6-answer-3">Padme Amidala
+                    <input type="radio" name="question-6" value="q6-answer-4">Jar Jar Binks <br> <br> <br>
+                    <span id="question">How many sith can exist at one time?</span> <br> <br>
+                    <input type="radio" name="question-7" value="q7-answer-1">1
+                    <input type="radio" name="question-7" value="q7-answer-2">2
+                    <input type="radio" name="question-7" value="q7-answer-3">10
+                    <input type="radio" name="question-7" value="q7-answer-4">5 <br> <br> <br>
+                    <span id="question">What US magazine declared Star Wars "the years best movie" in its May 30, 1977 issue?</span> <br>
+                    <input type="radio" name="question-8" value="q8-answer-1">Sports Illustrated
+                    <input type="radio" name="question-8" value="q8-answer-2">People
+                    <input type="radio" name="question-8" value="q8-answer-3">Rolling Stone
+                    <input type="radio" name="question-8" value="q8-answer-4">Time <br> <br> <br>
+                    <span id="question">Who is Darth Tyranus also known as</span> <br> <br>
+                    <input type="radio" name="question-9" value="q9-answer-1">Senator Palpatine
+                    <input type="radio" name="question-9" value="q9-answer-2">Count Dooku
+                    <input type="radio" name="question-9" value="q9-answer-3">Plo Kuun
+                    <input type="radio" name="question-9" value="q9-answer-4">Yoda <br> <br> <br>
+                    <span id="question">Whose DNA were the clones made from?</span> <br> <br> 
+                    <input type="radio" name="question-10" value="q10-answer-1">Jango Fett
+                    <input type="radio" name="question-10" value="q10-answer-2">Lando Calrissian
+                    <input type="radio" name="question-10" value="q10-answer-3">Darth Vader
+                    <input type="radio" name="question-10" value="q10-answer-4">Ki-Andi Mundi <br> <br> <br>
+                </div>
+    
+            </form>
+        </div>
+    
+        <button id="submit">Submit</button>
+    
+        <div id="results">
+            <span id="game-over">Game Over!</span> <br> <br>
+            <span>Correct:</span>
+            <span id="correct-answers">0</span> <br>
+            <span>Incorrect:</span>
+            <span id="incorrect-answers">0</span> <br>
+            <span>Unanswered:</span>
+            <span id="not-answered">0</span>
+        </div>
 
-    <button id="start">Start</button>
-
-    <div id="timer-display">
-        <div>Time Remaining</div>
-        <div id="seconds-remaining"></div> <br>
-    </div>
-
-    <div id="questions">
-        <form action="">
-            <div class="question-box">
-                <span>Question 1 Goes Here</span> <br>
-                <input type="radio" name="question-1" value="q1-answer-1">Answer 1
-                <input type="radio" name="question-1" value="q1-answer-2">Answer 2
-                <input type="radio" name="question-1" value="q1-answer-3">Answer 3
-                <input type="radio" name="question-1" value="q1-answer-4">Answer 4 <br> <br>
-                <span>Question 2 Goes Here</span> <br>
-                <input type="radio" name="question-2" value="q2-answer-1">Answer 1
-                <input type="radio" name="question-2" value="q2-answer-2">Answer 2
-                <input type="radio" name="question-2" value="q2-answer-3">Answer 3
-                <input type="radio" name="question-2" value="q2-answer-4">Answer 4 <br> <br>
-                <span>Question 3 Goes Here</span> <br>
-                <input type="radio" name="question-3" value="q3-answer-1">Answer 1
-                <input type="radio" name="question-3" value="q3-answer-2">Answer 2
-                <input type="radio" name="question-3" value="q3-answer-3">Answer 3
-                <input type="radio" name="question-3" value="q3-answer-4">Answer 4 <br> <br>
-                <span>Question 4 Goes Here</span> <br>
-                <input type="radio" name="question-4" value="q4-answer-1">Answer 1
-                <input type="radio" name="question-4" value="q4-answer-2">Answer 2
-                <input type="radio" name="question-4" value="q4-answer-3">Answer 3
-                <input type="radio" name="question-4" value="q4-answer-4">Answer 4 <br> <br>
-            </div>
-
-        </form>
-    </div>
-
-    <button id="submit">Submit</button>
-
-    <div id="results">
-        <span>Game Over</span> <br>
-        <span>Score</span> <br>
-        <span>Correct</span>
-        <span id="correct-answers">0</span> <br>
-        <span>Incorrect</span>
-        <span id="incorrect-answers">0</span> <br>
-        <span>Unanswered</span>
-        <span id="not-answered">0</span>
     </div>
     
 </body>
